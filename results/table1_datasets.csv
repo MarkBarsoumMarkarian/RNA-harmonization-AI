@@ -1,0 +1,4 @@
+"Dataset","Platform","Samples","Purpose"
+"TCGA-PAAD","Illumina HiSeq (RNA-seq)",178,"Training"
+"GSE71729","Illumina HiSeq (RNA-seq)",357,"Validation"
+"Total","-",535,"-"

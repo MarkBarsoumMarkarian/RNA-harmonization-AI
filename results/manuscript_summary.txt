@@ -1,0 +1,33 @@
+PANCREATIC CANCER RNA BIOMARKER DISCOVERY
+Results Summary for Manuscript
+Generated: 2025-11-01 03:05:23 
+================================================================================
+
+DATASET OVERVIEW
+--------------------------------------------------------------------------------
+    Dataset                 Platform Samples    Purpose
+1 TCGA-PAAD Illumina HiSeq (RNA-seq)     178   Training
+2  GSE71729 Illumina HiSeq (RNA-seq)     357 Validation
+3     Total                        -     535          -
+
+Total genes analyzed: 14137 
+
+CLASSIFICATION TASK
+--------------------------------------------------------------------------------
+Outcome: Survival (Alive vs Dead)
+Training set: TCGA (n=178)
+Validation set: GSE71729 (n=357)
+
+MODEL PERFORMANCE
+--------------------------------------------------------------------------------
+Random Forest (Batch Corrected):
+  Training Accuracy: 64.04 %
+  OOB Error: 35.96 %
+
+TOP 5 BIOMARKER GENES
+--------------------------------------------------------------------------------
+1. LAMC2 - Laminin Subunit Gamma 2
+2. DKK1 - Dickkopf WNT Signaling Pathway Inhibitor 1
+3. ITGB6 - Integrin Subunit Beta 6
+4. GPRC5A - G Protein-Coupled Receptor Class C Group 5 Member A
+5. MAL2 - Mal, T-Cell Differentiation Protein 2
