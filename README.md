@@ -130,11 +130,10 @@ source("scripts/03_eda_initial.R")
 5. **Survival prediction**: Alive vs Dead classification (85 vs 93 samples, balanced classes)
 
 ### Figures for Manuscript
-- Figure 1: Study design flowchart
-- Figure 2: PCA before/after batch correction
-- Figure 3: Cross-cohort classification performance
-- Figure 4: Feature importance and biological interpretation
-- Figure 5: Shiny app screenshot
+- PCA before/after batch correction
+- Cross-cohort classification performance
+- Feature importance and biological interpretation
+- Shiny app screenshots
 
 ---
 
