@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This project develops an AI-powered framework to harmonize RNA expression data across multiple cancer datasets (TCGA + GEO) and build robust machine learning classifiers for pancreatic cancer subtyping. The goal is to create a reproducible, clinically-translatable pipeline that addresses batch effects—a major barrier in multi-center biomarker studies.
+This project develops an AI-powered framework to harmonize RNA expression data across multiple cancer datasets (TCGA + GEO) and build robust machine learning classifiers for pancreatic cancer subtyping. The goal is to create a reproducible, clinically-translatable pipeline that addresses batch effects, a major barrier in multi-center biomarker studies.
 
 ### Why Pancreatic Cancer?
 - **High unmet need**: 5-year survival rate <10%
