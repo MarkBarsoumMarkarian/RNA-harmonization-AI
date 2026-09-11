@@ -1,0 +1,2 @@
+"analysis","validation","n_patients","n_events","c_index","ci_95_low","ci_95_high","repeats","outer_folds","top_mad_inside_training"
+"Repeated nested 5-fold CV; expression-only ridge Cox","Internal TCGA only",176,92,0.629854632241267,0.566589314542077,0.693621308930628,5,5,1000

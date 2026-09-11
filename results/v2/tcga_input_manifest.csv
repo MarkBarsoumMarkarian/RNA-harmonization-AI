@@ -1,0 +1,4 @@
+"file","source_url","bytes","md5"
+"data_mrna_seq_v2_rsem.txt","https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/paad_tcga_pan_can_atlas_2018/data_mrna_seq_v2_rsem.txt",25937712,"00236ecd40af3963e9749c121b4c75c8"
+"data_clinical_patient.txt","https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/paad_tcga_pan_can_atlas_2018/data_clinical_patient.txt",58621,"b160e28d5380f438a429e1b6d4d6b0e3"
+"data_clinical_sample.txt","https://media.githubusercontent.com/media/cBioPortal/datahub/master/public/paad_tcga_pan_can_atlas_2018/data_clinical_sample.txt",38978,"7e6c3490ca86c3a8a717233793f1a5bd"

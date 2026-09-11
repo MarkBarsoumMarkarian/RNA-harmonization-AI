@@ -1,11 +1,8 @@
 # ==============================================================================
-# Interactive Shiny App for RNA Biomarker Discovery
+# ARCHIVED V1 SHINY APP — NOT A VALIDATED PROGNOSTIC TOOL
 # ==============================================================================
-# This app allows users to:
-#   - Explore batch correction effects
-#   - View model predictions
-#   - Examine gene expression patterns
-#   - Download results
+# This historical dashboard displays invalid v1 artifacts. It is retained only
+# for provenance. See README.md, V2_AUDIT.md, scripts/v2/, and results/v2/.
 # ==============================================================================
 
 library(shiny)
@@ -67,7 +64,7 @@ cat("Data loaded successfully!\n")
 ui <- dashboardPage(
   skin = "blue",
   
-  dashboardHeader(title = "RNA Biomarker Discovery - Pancreatic Cancer"),
+  dashboardHeader(title = "ARCHIVED V1 — NOT VALIDATED"),
   
   dashboardSidebar(
     sidebarMenu(
@@ -89,22 +86,22 @@ ui <- dashboardPage(
         fluidRow(
           box(
             title = "Project Overview", width = 12, status = "primary", solidHeader = TRUE,
-            h3("Batch-Harmonized AI for Pancreatic Cancer RNA Data"),
-            p("This interactive tool demonstrates a reproducible pipeline for cross-cohort RNA biomarker discovery."),
+            h3("Archived v1 dashboard — claims superseded"),
+            p("GSE71729 was misidentified as RNA-seq, survival was reduced to alive/dead status, and the external cohort influenced joint ComBat fitting. These displays are historical artifacts, not validation evidence."),
             hr(),
             h4("Key Features:"),
             tags$ul(
               tags$li("Batch correction using ComBat algorithm"),
               tags$li("Machine learning classification (Random Forest)"),
-              tags$li("Cross-cohort validation (TCGA → GEO)"),
-              tags$li("Prognostic biomarker identification")
+              tags$li("Unlabelled TCGA → GEO predictions; not external validation"),
+              tags$li("Exploratory candidates; not validated biomarkers")
             )
           )
         ),
         fluidRow(
           valueBox(535, "Total Samples", icon = icon("users"), color = "blue", width = 3),
           valueBox(14137, "Genes Analyzed", icon = icon("dna"), color = "green", width = 3),
-          valueBox("92.6%", "Model Accuracy", icon = icon("check-circle"), color = "yellow", width = 3),
+          valueBox("INVALID", "Archived Accuracy Claim", icon = icon("ban"), color = "yellow", width = 3),
           valueBox(5, "Top Biomarkers", icon = icon("star"), color = "red", width = 3)
         ),
         fluidRow(
@@ -142,7 +139,7 @@ ui <- dashboardPage(
           box(
             title = "Interpretation", width = 12, status = "info",
             p(strong("Before:"), "Samples cluster by dataset (technical variation dominates)"),
-            p(strong("After:"), "Improved mixing of datasets (biological signal preserved)")
+            p(strong("After:"), "Improved dataset mixing; preservation of biological signal was not established")
           )
         )
       ),
@@ -154,7 +151,7 @@ ui <- dashboardPage(
           box(
             title = "Gene Expression Explorer", width = 12, status = "primary", solidHeader = TRUE,
             selectInput("selected_gene", "Select Gene:", choices = top_genes, selected = top_genes[1]),
-            p("Explore expression patterns of top biomarker genes across datasets and survival groups.")
+            p("Explore historical v1 feature-importance candidates; these are not validated biomarkers.")
           )
         ),
         fluidRow(
@@ -181,7 +178,7 @@ ui <- dashboardPage(
         fluidRow(
           box(
             title = "Random Forest Model Performance", width = 12, status = "primary", solidHeader = TRUE,
-            p("Classification task: Predicting survival outcome (Alive vs Dead) in pancreatic cancer patients")
+            p("Archived invalid endpoint: alive/dead status discarded follow-up time and censoring.")
           )
         ),
         fluidRow(
@@ -207,7 +204,7 @@ ui <- dashboardPage(
         fluidRow(
           box(
             title = "Prediction Interface", width = 12, status = "primary", solidHeader = TRUE,
-            p("View model predictions on the GEO validation cohort (external dataset)")
+            p("Historical predictions on an unlabelled, mixed-specimen GEO cohort; these are not external validation.")
           )
         ),
         fluidRow(
@@ -259,7 +256,7 @@ server <- function(input, output, session) {
       Samples = c(sum(sample_metadata$dataset == "TCGA"),
                   sum(sample_metadata$dataset == "GSE71729"),
                   nrow(sample_metadata)),
-      Purpose = c("Training", "Validation", "-")
+      Purpose = c("V1 model fitting", "Unlabelled v1 target; not validation", "-")
     )
   }, options = list(dom = 't'))
   
@@ -357,7 +354,7 @@ server <- function(input, output, session) {
   
   output$accuracy_box <- renderValueBox({
     acc <- round((1 - tail(rf_model$err.rate[,1], 1))*100, 2)
-    valueBox(paste0(acc, "%"), "Training Accuracy", icon = icon("check"), color = "green")
+    valueBox(paste0(acc, "%"), "OOB Accuracy (v1; pipeline-leaky)", icon = icon("check"), color = "green")
   })
   
   output$n_trees_box <- renderValueBox({

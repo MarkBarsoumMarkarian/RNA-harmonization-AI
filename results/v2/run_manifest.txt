@@ -1,0 +1,14 @@
+Run time: 2026-09-11 23:03:15 UTC
+R: R version 4.5.3 (2026-03-11)
+survival: 3.8.6
+Input source: cBioPortal Datahub paad_tcga_pan_can_atlas_2018
+Input purpose: fast provisional v2 reanalysis; not exact GDC STAR-count reproduction
+Patients: 176
+Events: 92
+Genes: 20511
+Outer folds: 5
+Repeats: 5
+Training-only MAD pool: 1000
+Candidate feature counts: 5,10,20
+Candidate ridge theta: 0.1,1,10
+Status: provisional internal validation; not external validation

@@ -1,0 +1,6 @@
+"specimen_class","n","eligible_for_primary_tumor_survival","has_survival_in_geo_series_matrix"
+"primary_tumor",145,TRUE,FALSE
+"metastasis",61,FALSE,FALSE
+"cell_line",17,FALSE,FALSE
+"normal_pancreas",46,FALSE,FALSE
+"normal_distant",88,FALSE,FALSE

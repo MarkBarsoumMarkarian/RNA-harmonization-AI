@@ -1,0 +1,2 @@
+"model","training_cohort","held_out_cohort","held_out_patients","held_out_events","apparent_training_c_index","held_out_c_index","held_out_ci_95_low","held_out_ci_95_high"
+"Original five genes; multivariable Cox; TCGA-fitted coefficients","TCGA_PAAD","GSE85916",79,57,0.644499891516598,0.569298952457695,0.476387532631043,0.657045856481296
